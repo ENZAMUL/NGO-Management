@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Favicon icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+        <title>Md Enzamul hoq NGO Management</title>
+
+        <!--[endif]-->
+
+
+        <style type="text/css">
+            .err {
+                color: red;
+            }
+
+            .succes {
+                color: green;
+            }
+
+            .mm{
+                margin-left: 30px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div layout:fragment="custom-content">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">BANGLADESH RURAL DEVELOPMENT PROGRAME(BRDP)</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+
+
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid" >
+
+
+
+                <span th:class="succes" th:text="${successMsg}"></span>
+
+                <div class="row" th:class="mm">
+                    <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+                        <div class="login-brand">
+                            NGOs play a critical part in developing society, improving communities, and promoting citizen.
+
+                        </div>
+
+
+                        <div class="card card-primary">
+                            <div class="card-header"><h4>Deposit Details Form:</h4></div>
+                            <div class="card-body">
+
+                                <form action="#" th:object="${deposit}" th:action="@{/deposit/add}" th:method="POST" enctype="multipart/form-data">
+
+                                    <div class="row">
+
+
+                                        <div class="row">
+
+                                            <div class="form-group col-12">
+                                                <table>
+                                                    <th>
+                                                        <label>Employee Name</label> 
+                                                    </th>
+                                                    <td>
+                                                        <select th:field="*{employee}" multiple required>
+                                                            <option th:each="employee : ${employeeList}" th:value="${employee.id}">
+                                                            <span th:text="${employee.employeeName}"></span>
+                                                            </option>
+                                                        </select>  
+                                                    </td>
+
+
+                                                </table>
+
+
+                                            </div>
+
+
+                                            <div class="form-group col-12">
+                                                <table>
+                                                    <th>
+                                                        <label>Account Number</label> 
+                                                    </th>
+                                                    <td>
+                                                        <select th:field="*{account}" multiple required>
+                                                            <option th:each="account : ${accountList}" th:value="${account.id}">
+                                                            <span th:text="${account.accountNumber}"></span>
+                                                            </option>
+                                                        </select>  
+                                                    </td>
+
+
+                                                </table>
+
+
+                                            </div>
+
+
+                                            <div class="form-group col-12">
+                                                <table>
+                                                    <th>
+                                                        <label>DepositTypeName</label>   
+                                                    </th>
+                                                    <td>
+                                                        <select th:field="*{depositType}" multiple required>
+                                                            <option th:each="depositType : ${depositTypeList}" th:value="${depositType.id}">
+                                                            <span th:text="${depositType.typeName}"></span>
+                                                            </option>
+                                                        </select> 
+                                                    </td>
+
+
+                                                </table>
+
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+                                        <div class="form-group col-12">
+                                            <label for="depositBranch">Deposit Branch</label>
+                                            <input id="depositBranch" type="text" th:field="*{depositBranch}" class="form-control" name="depositBranch" placeholder="Enter DepositBranch Name"/>
+                                        </div>
+
+
+                                        <div class="form-group col-12">
+                                            <label for="loanCodeNumber">NumberOf Deposit</label>
+                                            <input id="loanCodeNumber" type="text" th:field="*{loanCodeNumber}" class="form-control" name="loanCodeNumber" placeholder="Enter  Number Of Deposit"/>
+                                        </div>
+
+                                        <!--
+                       this.depositBranch = depositBranch;
+               this.loanCodeNumber = loanCodeNumber;
+               this.depositDate = depositDate;
+               this.amount = amount;
+       
+       
+               this.employee = employee;
+               this.account = account;
+               this.depositType = depositType;
+                                        -->
+
+                                        <!-- RegiDate-->
+
+                                        <div class="form-group col-12">
+                                            <label for="amount">Deposit Amount</label>
+                                            <input id="amount" type="text" th:field="*{amount}" class="form-control" name="amount" placeholder="Enter Deposit Amount"/>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">
+                                            Deposit Activation
+                                        </button>
+                                    </div>
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <a th:href="@{/}">Home</a>
+
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+        </div>
+
+    </body>
+
+</html>

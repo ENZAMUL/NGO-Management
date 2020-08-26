@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Md Enzamul hoq NGO Management</title>
+
+    <![endif]-->
+    <!--
+        <style type="text/css">
+            table {
+                width: 80%;
+                margin: 0 auto;
+            }
+        </style>
+    -->
+
+    <style>
+        .mm{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color:#f5c6cb;}
+
+        #customers tr:hover {background-color:#f3c17a;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0e2259;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">BANGLADESH RURAL DEVELOPMENT PROGRAME(BRDP)</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid" >
+
+
+        <div class="container">
+            <div class="row">
+                NGOs play an important role in social, economic, human rights development of developing countries.
+
+                <div class="col-10">
+                    <h2>Employee Data Details With Sample Data</h2>
+                </div>
+                <div class="col-2">
+                    <a class="btn" th:href="@{/list}">Employee Report Summary</a>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table id="customers">
+                    <tr>
+                        <th>ID</th>
+                        <th>Emp_Name</th>
+                        <th>Emp_Code</th>
+                        <th>Emp_Gender</th>
+                        <th>Emp_Age</th>
+                        <th>Emp_Salary</th>
+                        <th>RegiDate</th>
+                        <th>emp_Mobile</th>
+                        <th>emp_Address</th>
+                        <th>emp_NID_No</th>
+
+                        <th>Ngo_Name</th>
+                        <th>Branch-Name</th>
+                        <th>EmployeeType_Name</th>
+                        <th>User_Name</th>
+
+                    </tr>
+                    <!--
+                    this.employeeName = employeeName;
+                  this.employeeCode = employeeCode;
+                  this.employeeGender = employeeGender;
+                  this.employeeAge = employeeAge;
+                  this.employeeSalary = employeeSalary;
+                  this.regiDate = regiDate;
+                  this.emplooyeeMobile = emplooyeeMobile;
+                  this.employeeddress = employeeddress;
+                  this.employeeNid = employeeNid;
+
+
+
+                  this.ngo = ngo;
+                  this.branch = branch;
+                  this.employeeType = employeeType;
+                  this.user = user;
+                    -->
+                    <tr th:each="employee : ${list}">
+                        <td th:text="${employee.id}"></td>
+                        <td th:text="${employee.employeeName}"></td>
+                        <td th:text="${employee.employeeCode}"></td>
+                        <td th:text="${employee.employeeGender}"></td>
+                        <td th:text="${employee.employeeAge}"></td>
+                        <td th:text="${employee.employeeSalary}"></td>
+                        <td th:text="${employee.regiDate}"></td>
+                        <td th:text="${employee.emplooyeeMobile}"></td>
+                        <td th:text="${employee.employeeddress}"></td>
+                        <td th:text="${employee.employeeNid}"></td>
+
+                        <td th:text="${employee.ngo.name}"></td>
+                        <td th:text="${employee.branch.branchName}"></td>
+                        <td th:text="${employee.employeeType.typeName}"></td>
+                        <td th:text="${employee.user.username}"></td>
+
+                    </tr>
+
+
+                    <tr style="background: lightsteelblue">
+                        <td colspan="9" style="font-size: x-large">Number Of Total Employee</td>
+                        <td colspan="5" style="font-weight: bold" th:text="${numberOfTotalEmployee}"></td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+
+        <a th:href="@{/report/numberOfAccount}">Next</a>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

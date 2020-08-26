@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Md Enzamul hoq NGO Management</title>
+
+<![endif]-->
+
+    <style type="text/css">
+        .err {
+            color: red;
+        }
+
+        .succes {
+            color: green;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+     <!-- ============================================================== -->
+     <!-- Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+     <div class="page-breadcrumb">
+         <div class="row">
+             <div class="col-12 d-flex no-block align-items-center">
+                 <h4 class="page-title">BANGLADESH RURAL DEVELOPMENT PROGRAME(BRDP)</h4>
+                 <div class="ml-auto text-right">
+                     <nav aria-label="breadcrumb">
+                         <ol class="breadcrumb">
+                             <li class="breadcrumb-item"> <a th:href="@{/}">Home</a></li>
+                             <li class="breadcrumb-item active" aria-current="page">Library</li>
+                         </ol>
+                     </nav>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+
+
+     <!-- ============================================================== -->
+     <!-- Container fluid  -->
+     <!-- ============================================================== -->
+     <div class="container-fluid" >
+
+
+         <div class="row" th:class="mm">
+             <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+                 <div class="login-brand">
+                     NGOs play a critical part in developing society, improving communities, and promoting citizen.
+
+                 </div>
+
+
+                 <div class="card card-primary">
+                     <div class="card-header"><h4>Edit AccountSummary</h4></div>
+                     <div class="card-body">
+
+                         <!--<form action="#" th:object="${accountSummary}" th:action="@{/accSummary/add}" th:method="POST" enctype="multipart/form-data">-->
+                         <form th:object="${accountSummary}" action="#" th:action="@{/accSummary/edit/} + ${id}" th:method="POST">
+
+                             <div class="row">
+
+                                 <div class="row">
+
+                                     <div class="form-group col-12">
+                                         <label>AccountCode Number</label>
+                                         <select th:field="*{account}" multiple required>
+                                             <option th:each="account : ${accountList}" th:value="${account.id}">
+                                                 <span th:text="${account.accountCodeNumber}"></span>
+                                             </option>
+                                         </select>
+
+                                     </div>
+                                 </div>
+
+
+
+                                 <div class="form-group col-12">
+                                     <label for="totalDepositAmount">Total Deposit Amount</label>
+                                     <input id="totalDepositAmount" type="text" th:field="*{totalDepositAmount}" class="form-control" name="totalDepositAmount" placeholder="Enter totalDepositAmount"/>
+                                 </div>
+
+
+                                 <div class="form-group col-12">
+                                     <label for="profitInDepositAmount">ProfitInDepositAmount</label>
+                                     <input id="profitInDepositAmount" type="text" th:field="*{profitInDepositAmount}" class="form-control" name="profitInDepositAmount" placeholder="Enter profitInDepositAmount"/>
+                                 </div>
+
+
+                                 <!--<div class="form-group col-12">-->
+                                     <!--<label for="totalDepositAmountWithProfit">TotalDepositAmountWithProfit</label>-->
+                                     <!--<input id="totalDepositAmountWithProfit" type="text" th:field="*{totalDepositAmountWithProfit}" class="form-control" name="totalDepositAmountWithProfit" placeholder="Enter totalDepositAmountWithProfit"/>-->
+                                 <!--</div>-->
+
+
+                                 <div class="form-group col-12">
+                                     <label for="widthrewDepositAmount">WidthrewDepositAmount</label>
+                                     <input id="widthrewDepositAmount" type="text" th:field="*{widthrewDepositAmount}" class="form-control" name="widthrewDepositAmount" placeholder="Enter widthrewDepositAmount"/>
+                                 </div>
+
+
+                                 <!--<div class="form-group col-12">-->
+                                     <!--<label for="availableDepositAmount">AvailableDepositAmount</label>-->
+                                     <!--<input id="availableDepositAmount" type="text" th:field="*{availableDepositAmount}" class="form-control" name="availableDepositAmount" placeholder="Enter availableDepositAmount"/>-->
+                                 <!--</div>-->
+
+
+                                 <div class="form-group col-12">
+                                     <label for="noOfLoanTaken">NoOfLoanTaken</label>
+                                     <input id="noOfLoanTaken" type="text" th:field="*{noOfLoanTaken}" class="form-control" name="noOfLoanTaken" placeholder="Enter noOfLoanTaken"/>
+                                 </div>
+
+
+                                 <div class="form-group col-12">
+                                     <label for="noOfLoanPaid">NoOfLoanPaid</label>
+                                     <input id="noOfLoanPaid" type="text" th:field="*{noOfLoanPaid}" class="form-control" name="noOfLoanPaid" placeholder="Enter noOfLoanPaid"/>
+                                 </div>
+
+
+                                 <!--<div class="form-group col-12">-->
+                                     <!--<label for="noOfLoanDue">NoOfLoanDue</label>-->
+                                     <!--<input id="noOfLoanDue" type="text" th:field="*{noOfLoanDue}" class="form-control" name="noOfLoanDue" placeholder="Enter noOfLoanDue"/>-->
+                                 <!--</div>-->
+
+
+                                 <div class="form-group col-12">
+                                     <label for="totalLoanAmount">TotalLoanAmount</label>
+                                     <input id="totalLoanAmount" type="text" th:field="*{totalLoanAmount}" class="form-control" name="totalLoanAmount" placeholder="Enter totalLoanAmount"/>
+                                 </div>
+
+
+                                 <div class="form-group col-12">
+                                     <label for="totalLoanPaidAmount">TotalLoanPaidAmount</label>
+                                     <input id="totalLoanPaidAmount" type="text" th:field="*{totalLoanPaidAmount}" class="form-control" name="totalLoanPaidAmount" placeholder="Enter totalLoanPaidAmount"/>
+                                 </div>
+
+
+                                 <!--
+
+                              this.totalDepositAmount = totalDepositAmount;
+                              this.profitInDepositAmount = profitInDepositAmount;
+                              this.totalDepositAmountWithProfit = totalDepositAmountWithProfit;
+                              this.widthrewDepositAmount = widthrewDepositAmount;
+                              this.availableDepositAmount = availableDepositAmount;
+                              this.noOfLoanTaken = noOfLoanTaken;
+                              this.noOfLoanPaid = noOfLoanPaid;
+                              this.noOfLoanDue = noOfLoanDue;
+                              this.totalLoanAmount = totalLoanAmount;
+                              this.totalLoanPaidAmount = totalLoanPaidAmount;
+                              this.totalLoanDueAmount = totalLoanDueAmount;
+                              this.currentLoanAmount = currentLoanAmount;
+                              this.currentLoanPaidAmount = currentLoanPaidAmount;
+                              this.currentLoanDueAmount = currentLoanDueAmount;
+
+
+                              this.account = account;
+                                                        -->
+
+
+                                 <!--<div class="form-group col-12">-->
+                                     <!--<label for="totalLoanDueAmount">TotalLoanDueAmount</label>-->
+                                     <!--<input id="totalLoanDueAmount" type="text" th:field="*{totalLoanDueAmount}" class="form-control" name="totalLoanDueAmount" placeholder="Enter totalLoanDueAmount"/>-->
+                                 <!--</div>-->
+
+
+                                 <div class="form-group col-12">
+                                     <label for="currentLoanAmount">CurrentLoanAmount</label>
+                                     <input id="currentLoanAmount" type="text" th:field="*{currentLoanAmount}" class="form-control" name="currentLoanAmount" placeholder="Enter currentLoanAmount"/>
+                                 </div>
+
+
+                                 <div class="form-group col-12">
+                                     <label for="currentLoanPaidAmount">CurrentLoanPaidAmount</label>
+                                     <input id="currentLoanPaidAmount" type="text" th:field="*{currentLoanPaidAmount}" class="form-control" name="currentLoanPaidAmount" placeholder="Enter currentLoanPaidAmount"/>
+                                 </div>
+
+
+                                 <!--<div class="form-group col-12">-->
+                                     <!--<label for="currentLoanDueAmount">CurrentLoanDueAmount</label>-->
+                                     <!--<input id="currentLoanDueAmount" type="text" th:field="*{currentLoanDueAmount}" class="form-control" name="currentLoanDueAmount" placeholder="Enter currentLoanDueAmount"/>-->
+                                 <!--</div>-->
+
+
+                             </div>
+
+
+
+                             <div class="form-group">
+                                 <button type="submit" class="btn btn-primary btn-block">
+                                  Update AccountSummary Information
+                                 </button>
+                             </div>
+
+
+                         </form>
+                     </div>
+                 </div>
+             </div>
+
+
+
+         </div>
+
+
+         <a th:href="@{/}">Home</a>
+
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Container fluid  -->
+     <!-- ============================================================== -->
+     <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Md Enzamul hoq NGO Management</title>
+
+    <![endif]-->
+    <!--
+        <style type="text/css">
+            table {
+                width: 80%;
+                margin: 0 auto;
+            }
+        </style>
+    -->
+
+    <style>
+        .mm{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color:#f5c6cb;}
+
+        #customers tr:hover {background-color:#f3c17a;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0e2259;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">BANGLADESH RURAL DEVELOPMENT PROGRAME(BRDP)</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid" >
+
+
+        <div class="container">
+            <center><h3>Profile Details</h3></center><hr>
+            <div class="row">
+                <div class="col-12">
+
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Age</td>
+                            <td>Birth Date</td>
+                            <td>Gender</td>
+                            <td>Email</td>
+                            <td>Mobile</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Md</td>
+                            <td>Enzamul Hoq</td>
+                            <td>29</td>
+                            <td>02/04/1991</td>
+                            <td>Male</td>
+                            <td>enzamulhoq3167@gmail.com</td>
+                            <td>01776779500</td>
+                            <!--<td><img th:src="@{/images/arif.png}" class="img-fluid" width="150" height="100"></td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+
+
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td><p>Dr. Farzana Islam</p>-->
+                                <!--<p>+088 01711644348</p>-->
+                                <!--<p>dr.islamfar@gmail.com</p>-->
+                            <!--</td>-->
+                            <!--<td>Professor</td>-->
+                            <!--<td>Gynaecology</td>-->
+                            <!--<td><img th:src="@{/images/female_img1.png}" class="img-fluid" width="150" height="100"></td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td><p>Dr. Din Mohhammad</p>-->
+                                <!--<p>+088 01711204348</p>-->
+                                <!--<p>dr.dinmqul@gmail.com</p>-->
+                            <!--</td>-->
+                            <!--<td>Professor</td>-->
+                            <!--<td>Gastrointrology</td>-->
+                            <!--<td><img th:src="@{/images/doctor_image.jpg}" class="img-fluid" width="150" height="100"></td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td><p>Dr.Hasan Ali Hydar</p>-->
+                                <!--<p>+088 01711203344</p>-->
+                                <!--<p>dr.hassan@gmail.com</p>-->
+                            <!--</td>-->
+                            <!--<td>Associate Professor</td>-->
+                            <!--<td>Neorology</td>-->
+                            <!--&lt;!&ndash;<td><img th:src="@{/images/dblack.png}" class="img-fluid" width="150" height="100"></td>&ndash;&gt;-->
+                        </tr>
+                        </tbody>
+
+
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <a th:href="@{/}">Home</a>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

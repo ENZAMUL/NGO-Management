@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Md Enzamul hoq NGO Management</title>
+
+<![endif]-->
+<!--
+    <style type="text/css">
+        table {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+-->
+
+    <style>
+        .mm{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color:#f5c6cb;}
+
+        #customers tr:hover {background-color:#f3c17a;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0e2259;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+     <!-- ============================================================== -->
+     <!-- Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+     <div class="page-breadcrumb">
+         <div class="row">
+             <div class="col-12 d-flex no-block align-items-center">
+                 <h4 class="page-title">BANGLADESH RURAL DEVELOPMENT PROGRAME(BRDP)</h4>
+                 <div class="ml-auto text-right">
+                     <nav aria-label="breadcrumb">
+                         <ol class="breadcrumb">
+                             <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                             <li class="breadcrumb-item active" aria-current="page">Library</li>
+                         </ol>
+                     </nav>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+
+
+     <!-- ============================================================== -->
+     <!-- Container fluid  -->
+     <!-- ============================================================== -->
+     <div class="container-fluid" >
+
+
+         <div class="container">
+             <div class="row">
+                 NGOs play an important role in social, economic, human rights development of developing countries.
+
+                 <div class="col-10">
+                     <h2>Account Data Details With Sample Data</h2>
+                 </div>
+                 <div class="col-2">
+                     <a class="btn" th:href="@{/list}">Account List</a>
+                 </div>
+             </div>
+
+             <div class="table-responsive">
+             <table id="customers">
+                 <tr>
+                     <th>ID</th>
+                     <th>acc_h_name</th>
+                     <th>acc_number</th>
+                     <th>acc_code_number</th>
+                     <!--<th>pri_de_amount</th>-->
+                     <!--<th>t_withdraw</th>-->
+                     <!--<th>bal_amount</th>-->
+                     <th>BirthDate</th>
+                     <th>acc_h_age</th>
+                     <th>Gender</th>
+                     <th>Email</th>
+                     <th>Mobile</th>
+                     <th>Address</th>
+                     <th>NID_No</th>
+                     <th>Profession</th>
+                     <th>acc_Open_Date</th>
+
+                     <th>Type_Name</th>
+                     <th>Branch_Name</th>
+                     <th>Nominee_Name</th>
+
+                     <th colspan="2">Action</th>
+                 </tr>
+                 <!--
+     this.accountHolderName = accountHolderName;
+this.accountNumber = accountNumber;
+this.accountCodeNumber = accountCodeNumber;
+this.primaryDepositAmount = primaryDepositAmount;
+this.totalWithdraw = totalWithdraw;
+this.balanceAmount = balanceAmount;
+this.birthDate = birthDate;
+this.accountHolderAge = accountHolderAge;
+this.gender = gender;
+this.email = email;
+this.mobile = mobile;
+this.address = address;
+this.nidNumber = nidNumber;
+this.profession = profession;
+this.accountOpeningDate = accountOpeningDate;
+
+
+
+this.accountType = accountType;
+this.branch = branch;
+this.nominees = nominees;
+                            -->
+
+                 <tr th:each="account : ${list}">
+                     <td th:text="${account.id}"></td>
+                     <td th:text="${account.accountHolderName}"></td>
+                     <td th:text="${account.accountNumber}"></td>
+                     <td th:text="${account.accountCodeNumber}"></td>
+                     <!--<td th:text="${account.primaryDepositAmount}"></td>-->
+                     <!--<td th:text="${account.totalWithdraw}"></td>-->
+                     <!--<td th:text="${account.balanceAmount}"></td>-->
+                     <td th:text="${account.birthDate}"></td>
+                     <td th:text="${account.accountHolderAge}"></td>
+                     <td th:text="${account.gender}"></td>
+                     <td th:text="${account.email}"></td>
+                     <td th:text="${account.mobile}"></td>
+                     <td th:text="${account.address}"></td>
+                     <td th:text="${account.nidNumber}"></td>
+                     <td th:text="${account.profession}"></td>
+                     <td th:text="${account.accountOpeningDate}"></td>
+
+
+                     <td th:text="${account.accountType.typeName}"></td>
+                     <td th:text="${account.branch.branchName}"></td>
+
+                     <td>
+                         <span th:each="abm :${account.nominees}">
+                             <span th:text="${abm.nomineeName}"></span>
+                         </span>
+                     </td>
+
+
+
+                     <td><a th:href="@{'/account/edit/'+${account.id}}">Edit</a></td>
+                     <td><a th:href="@{'/account/del/'+${account.id}}">Delete</a></td>
+
+                 </tr>
+             </table>
+             </div>
+
+
+         </div>
+
+
+         <a th:href="@{/}">Home</a>
+
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Container fluid  -->
+     <!-- ============================================================== -->
+     <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

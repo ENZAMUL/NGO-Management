@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <aside th:fragment="left" class="left-sidebar" data-sidebarbg="skin5">
+            <div class="scroll-sidebar" >
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="p-t-30">
+                        <!--                 DashBoard
+                                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" th:href="@{/}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>-->
+
+
+                        <!-- Role Class -->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Roles Information </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/role/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/role/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Edit</span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/role/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- User Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">User Registration</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/user/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/user/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/user/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Ngo Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Ngo Details</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/ngo/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/ngo/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/ngo/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <!-- Branch Class -->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Branch Class</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/branch/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/branch/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/branch/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+
+
+                        <!-- EmployeeType Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">EmployeeType</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/empType/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/empType/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/empType/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- Employee Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Employees Appointment</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/employee/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/employee/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/employee/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- Nominee Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Nominee Registration</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/nominee/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/nominee/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/nominee/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- AccountType Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">AccountTypes</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/accType/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/accType/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/accType/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- Account Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Account Openning</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/account/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/account/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/account/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <!-- DepositType Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">DepositTypes</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/depType/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/depType/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/depType/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- Deposit Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Deposits in Account</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/deposit/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/deposit/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/deposit/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- LoanType Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">LoanTypes</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/loanType/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/loanType/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/loanType/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+
+
+                        <!-- Loan Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Loan Distribution</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/loan/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/loan/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/loan/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- CollectionType Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">CollectionTypes</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/collType/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/collType/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/collType/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- LoanCollection Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Loan Collections</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/loanCollect/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/loanCollect/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/loanCollect/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- Withdraw Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Withdraws</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/withdraw/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/withdraw/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/withdraw/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!-- AccountSummary Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">AccountSummary</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/accSummary/add}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Add </span></a></li>
+                                <!--<li class="sidebar-item"><a th:href="@{/accSummary/edit}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Edit </span></a></li>-->
+                                <li class="sidebar-item"><a th:href="@{/accSummary/list}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> List </span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <!--Reports Summary Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Reports Summary Class</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a  th:href="@{/report/totaldepositamount}" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu">totaldepositamount</span></a></li>
+                                <li class="sidebar-item"><a th:href="@{/report/distributedloan}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">LoanAmount</span></a></li>
+                                <li class="sidebar-item"><a th:href="@{/report/numberOfBranch}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">NumberOfBranch</span></a></li>
+                                <li class="sidebar-item"><a th:href="@{/report/numberOfEmployee}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">NumberOfTotalEmployee</span></a></li>
+                                <li class="sidebar-item"><a th:href="@{/report/numberOfAccount}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">NumberOfAccounts</span></a></li>
+
+                                <li class="sidebar-item"><a th:href="@{/report/collectionLoanSummary}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">LoanCollectionSummary</span></a></li>
+                                <li class="sidebar-item"><a th:href="@{/report/withdrawAmount}"  class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">TotalWithdrawAmount</span></a></li>
+
+
+                            </ul>
+                        </li>
+                        <!--Report Generate-->
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" th:href="@{/report}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">J_Report</span></a></li>
+
+
+                        <!-- About Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" th:href="@{/about}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">About</span></a></li>
+
+                        <!-- Profile Class-->
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" th:href="@{/profile}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">User Profile Information</span></a></li>
+
+
+                        <!--not important-->
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">Authentication </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="authentication-login.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Login </span></a></li>
+                                <li class="sidebar-item"><a href="authentication-register.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Register </span></a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+    </body>
+</html>

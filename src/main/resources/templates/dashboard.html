@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+       
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+        <title>Md Enzamul hoq NGO Management</title>
+
+        
+        <style>
+            h1:hover {
+                background-color: #008a00;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div layout:fragment="custom-content">
+          
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h1 class="page-title" >BANGLADESH RURAL DEVELOPMENT PROGRAME(BRDP)</h1>                 
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            <!--             ============================================================== 
+                         End Bread crumb and right sidebar toggle 
+                         ============================================================== 
+            
+            
+            
+                         ============================================================== 
+                         Container fluid  
+                         ============================================================== 
+                        <div class="container-fluid" >
+                             ============================================================== 
+                             Sales Cards  
+                             ============================================================== 
+                            <div class="row">
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <div class="card card-hover">
+                                        <div class="box bg-cyan text-center">
+                                            <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
+                                            <h6 class="text-white">Dashboard</h6>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-4 col-xlg-3">
+                                    <a th:href="@{/role/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-success text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                                                <h6 class="text-white">Roles</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/user/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-warning text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
+                                                <h6 class="text-white">User</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/ngo/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-danger text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
+                                                <h6 class="text-white">Ngo</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/branch/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-info text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
+                                                <h6 class="text-white">Branch</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 Column 
+            
+            
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-4 col-xlg-3">
+                                    <a th:href="@{/empType/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-danger text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
+                                                <h6 class="text-white">EmployeeTyps</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/employee/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-info text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
+                                                <h6 class="text-white">Employees</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/accType/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-cyan text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
+                                                <h6 class="text-white">AccountTypes</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/nominee/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-success text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
+                                                <h6 class="text-white">Nominees</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/account/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-warning text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
+                                                <h6 class="text-white">Accounts</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 Column 
+            
+            
+            
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/accSummary/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-cyan text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
+                                                <h6 class="text-white">AccountSummarys</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-4 col-xlg-3">
+                                    <a th:href="@{/depType/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-success text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                                                <h6 class="text-white">DepositTypes</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/deposit/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-warning text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
+                                                <h6 class="text-white">Deposits</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/loanType/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-danger text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
+                                                <h6 class="text-white">LoanTypes</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/loan/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-info text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
+                                                <h6 class="text-white">Loans</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/loanType/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-danger text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
+                                                <h6 class="text-white">CollectionTypes</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/loanCollect/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-info text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
+                                                <h6 class="text-white">LoanCollections</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/withdraw/list}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-cyan text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
+                                                <h6 class="text-white">Withdraws</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/about}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-success text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
+                                                <h6 class="text-white">Abouts</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+            
+            
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/profile}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-warning text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
+                                                <h6 class="text-white">AdminInformations</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 Column 
+                                <div class="col-md-6 col-lg-2 col-xlg-3">
+                                    <a th:href="@{/report/numberOfBranch}">
+                                        <div class="card card-hover">
+                                            <div class="box bg-cyan text-center">
+                                                <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
+                                                <h6 class="text-white">ReportSummary</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>-->
+
+        </div>
+        <!--==============================================================-->      
+    </div>
+    <!--==============================================================--> 
+    <!--             End Container fluid  
+                 ============================================================== 
+                 ============================================================== -->
+</div>
+
+</body>
+
+</html>-->

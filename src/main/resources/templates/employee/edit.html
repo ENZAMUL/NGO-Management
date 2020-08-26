@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Md Enzamul hoq NGO Management</title>
+
+<![endif]-->
+
+    <style type="text/css">
+        .err {
+            color: red;
+        }
+
+        .succes {
+            color: green;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+     <!-- ============================================================== -->
+     <!-- Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+     <div class="page-breadcrumb">
+         <div class="row">
+             <div class="col-12 d-flex no-block align-items-center">
+                 <h4 class="page-title">BANGLADESH RURAL DEVELOPMENT PROGRAME(BRDP)</h4>
+                 <div class="ml-auto text-right">
+                     <nav aria-label="breadcrumb">
+                         <ol class="breadcrumb">
+                             <li class="breadcrumb-item"><a href="#">Home</a></li>
+                             <li class="breadcrumb-item active" aria-current="page">Library</li>
+                         </ol>
+                     </nav>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+
+
+     <!-- ============================================================== -->
+     <!-- Container fluid  -->
+     <!-- ============================================================== -->
+     <div class="container-fluid" >
+
+
+         <div class="row" th:class="mm">
+             <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+                 <div class="login-brand">
+                     NGOs play a critical part in developing society, improving communities, and promoting citizen.
+                 </div>
+
+
+                 <div class="card card-primary">
+                     <div class="card-header"><h4>Edit Employee</h4></div>
+                     <div class="card-body">
+
+                         <!--<form action="#" th:object="${employee}" th:action="@{/employee/add}" th:method="POST" enctype="multipart/form-data">-->
+
+                         <form th:object="${employee}" action="#" th:action="@{/employee/edit/} + ${id}" th:method="POST">
+                             <div class="row">
+
+                                 <div class="row">
+
+                                     <div class="form-group col-12">
+                                         <label>NGO Name</label>
+                                         <select th:field="*{ngo}" multiple required>
+                                            <!-- <option th:each="ngo : ${ngoList}" th:value="${ngo.id}">
+                                                 <span th:text="${ngo.name}"></span>
+                                             </option>-->
+                                         </select>
+
+                                     </div>
+
+
+                                     <div class="form-group col-12">
+                                         <label>Branch Name</label>
+                                      <!--   <select th:field="*{branch}" multiple required>
+                                             <option th:each="branch : ${branchList}" th:value="${branch.id}">
+                                                 <span th:text="${branch.branchName}"></span>
+                                             </option>-->
+                                         </select>
+                                     </div>
+
+
+                                     <div class="form-group col-12">
+                                         <label>EmployeeType Name</label>
+                                         <select th:field="*{employeeType}" multiple required>
+                                            <!-- <option th:each="employeeType : ${employeeTypeList}" th:value="${employeeType.id}">
+                                                  <span th:text="${employeeType.typeName}"></span>
+                                             </option>-->
+                                         </select>
+
+                                     </div>
+
+
+
+                                     <div class="form-group col-12">
+                                         <label>user Name</label>
+                                         <select th:field="*{user}" multiple required>
+                                            <!--<option th:each="user : ${userList}" th:value="${user.id}">-->
+                                                 <!--<span th:text="${user.username}"></span>-->
+                                             <!--</option>-->
+                                         </select>
+
+                                     </div>
+
+                                 </div>
+
+
+
+                                 <div class="form-group col-12">
+                                     <label for="employeeName">Employee Name</label>
+                                     <input id="employeeName" type="text" th:field="*{employeeName}" class="form-control" name="employeeName" placeholder="Enter Employee Name"/>
+                                 </div>
+
+
+                                 <div class="form-group col-12">
+                                     <label for="employeeCode">Employee Code</label>
+                                     <input id="employeeCode" type="text" th:field="*{employeeCode}" class="form-control" name="employeeCode" placeholder="Enter Employee Code"/>
+                                 </div>
+
+                                 <!--
+               this.employeeName = employeeName;
+               this.employeeCode = employeeCode;
+               this.employeeGender = employeeGender;
+               this.employeeAge = employeeAge;
+               this.employeeSalary = employeeSalary;
+               this.regiDate = regiDate;
+               this.emplooyeeMobile = emplooyeeMobile;
+               this.employeeddress = employeeddress;
+               this.employeeNid = employeeNid;
+
+
+
+               this.ngo = ngo;
+               this.branch = branch;
+               this.employeeType = employeeType;
+               this.user = user;
+                                         -->
+
+                                 <div class="form-group col-12">
+                                     <label> Employee Gender</label>
+                                     <input id="Mgender" type="radio" th:field="*{employeeGender}" th:value="male" class="form-control" name="gender">Male
+                                     <input id="Fgender" type="radio" th:field="*{employeeGender}" th:value="female" class="form-control" name="gender">Female
+                                 </div>
+
+
+
+                                 <div class="form-group col-12">
+                                     <label for="employeeAge">Employee Age</label>
+                                     <input id="employeeAge" type="text" th:field="*{employeeAge}" class="form-control" name="employeeAge" placeholder="Enter Employee Age"/>
+                                 </div>
+
+
+
+                                 <div class="form-group col-12">
+                                     <label for="employeeSalary">Employee Salary</label>
+                                     <input id="employeeSalary" type="text" th:field="*{employeeSalary}" class="form-control" name="employeeSalary" placeholder="Enter Employee Salary"/>
+                                 </div>
+
+                                 <!-- RegiDate-->
+
+                                 <div class="form-group col-12">
+                                     <label for="emplooyeeMobile">Employee Mobile</label>
+                                     <input id="emplooyeeMobile" type="text" th:field="*{emplooyeeMobile}" class="form-control" name="emplooyeeMobile" placeholder="Enter Employee Mobile"/>
+                                 </div>
+
+
+
+                                 <div class="form-group col-12">
+                                     <label for="employeeddress">Employee Address</label>
+                                     <input id="employeeddress" type="text" th:field="*{employeeddress}" class="form-control" name="employeeddress" placeholder="Enter Employee Address"/>
+                                 </div>
+
+                                 <div class="form-group col-12">
+                                     <label for="employeeNid">Employee NID</label>
+                                     <input id="employeeNid" type="text" th:field="*{employeeNid}" class="form-control" name="employeeNid" placeholder="Enter Employee NID Number"/>
+                                 </div>
+
+
+
+
+                             </div>
+
+
+
+                             <div class="form-group">
+                                 <button type="submit" class="btn btn-primary btn-block">
+                                Update Employee Information
+                                 </button>
+                             </div>
+
+
+                         </form>
+                     </div>
+                 </div>
+             </div>
+
+
+
+         </div>
+
+
+         <a th:href="@{/}">Home</a>
+
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Container fluid  -->
+     <!-- ============================================================== -->
+     <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>
